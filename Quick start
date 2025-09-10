@@ -1,0 +1,25 @@
+
+```python
+from ai_readiness import AssessmentFramework
+
+# Initialize assessment
+assessment = AssessmentFramework()
+
+# Configure for your organization
+config = {
+    'company_size': 'enterprise',
+    'industry': 'financial_services',
+    'compliance_requirements': ['SOX', 'PCI-DSS'],
+    'use_cases': ['fraud_detection', 'risk_modeling']
+}
+
+# Run comprehensive assessment
+results = assessment.run_full_assessment(config)
+
+# Generate executive report
+assessment.generate_executive_report(results, output_path='./reports/')
+
+# Calculate ROI projections
+roi_analysis = assessment.calculate_roi(results, investment_range=(500000, 2000000))
+print(f"Projected ROI: {roi_analysis['roi_percentage']:.1f}%")
+```
